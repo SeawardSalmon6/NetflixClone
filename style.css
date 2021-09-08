@@ -357,6 +357,10 @@ section {
     vertical-align: top;
 }
 
+.duvidas-title a:hover, .nav-item-text:hover {
+    text-decoration: underline;
+}
+
 #rodape .select {
     margin-top: 20px;
 }
