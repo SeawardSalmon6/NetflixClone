@@ -65,17 +65,20 @@ section { /* Giving every Section a border-bottom */
 	margin-left: auto;
 }
 
-.lang-dropdown {
-    width: 120px;
-    height: 35px;
-    padding: .5rem 1.375rem;
+.lang-dropdown { /* Styling Dropdown-Select Button */
+    width: 132px;
+    height: 36px;
+    padding: 8px 22px;
     font-size: .875rem;
     line-height: 1.3em;
+	margin-left: 12px;
+    margin-right: 32px;
     white-space: nowrap;
-    background-color: rgba(0,0,0,0.4);
+	text-indent: 0;
     color: white;
+    background-color: rgba(0, 0, 0, .4);
     border: 1px solid #aaa;
-    margin-right: 25px;
+	border-radius: 1px;
 
     /* Icon Approach */
 	background-image: url(images/world-wide-web.svg);
@@ -84,23 +87,31 @@ section { /* Giving every Section a border-bottom */
 	background-position: 0.5em center;
 }
 
-.btn-login {
+.btn-login { /* Styling Login Button */
     background-color: var(--main-red);
-    padding: 8px 17px;
+    padding: 10px 17px;
     border-radius: 3px;
     text-align: center;
 }
 
 /* Background Config */
-.background-div {
+.hero-container {
+    width: 100%;
+    position: relative;
+    padding: 70px 45px;
+    text-align: center;
+    background: transparent;
+}
+
+.background-div { /* Div-Prepare for positioning */
     position: absolute;
     top: 0;
-    bottom: -15px;
+    bottom: 0;
     right: 0;
     left: 0;
     overflow: hidden;
-    filter: brightness(70%);
     z-index: -1;
+    filter: brightness(70%);
 }
 
 .background-img {
@@ -110,14 +121,6 @@ section { /* Giving every Section a border-bottom */
 }
 
 /* About Us Card-Text */
-.hero-container {
-    width: 100%;
-    position: relative;
-    padding: 70px 45px;
-    text-align: center;
-    background: transparent;
-}
-
 .card {
     padding: 70px 0;
     max-width: 950px;
