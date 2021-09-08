@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+/* Setting Project Colors */
 :root {
     --main-red: #E50914;
     --border-section: #222222;
     --faq-questions-background: #303030;
 }
 
+/* Reseting CSS */
 * {
     border: 0;
     padding: 0;
@@ -14,6 +16,7 @@
     font-family: 'Roboto', Arial, sans-serif;
 }
 
+/* Body-Container Config */
 #body-content {
     background-color: black;
     color: white;
@@ -21,39 +24,19 @@
     overflow-x: hidden;
 }
 
-a {
+a { /* Setting Standard Style for Anchors */
     text-decoration: none;
     color: white;
 }
 
-section {
+section { /* Giving every Section a border-bottom */
     border-bottom: 8px solid var(--border-section);
 }
 
-#first-section {
+/* First Section Style */ 
+#first-section { /* Centering Section and adding a blur to it */
     margin: 0 auto;
     background: linear-gradient(to top,rgba(0,0,0,1) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,0.85));
-}
-
-.hero-container {
-    
-}
-
-.background-div {
-    position: absolute;
-    top: 0;
-    bottom: -15px;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-    filter: brightness(70%);
-    z-index: -1;
-}
-
-.background-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* Navbar - Header */
@@ -62,24 +45,27 @@ section {
     margin: 0 3.5rem;
 }
 
-.nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5rem;
+.nav-content { /* Container that organizes the content inside of navbar */
     height: auto;
-}
-
-#navbar-brand img {
-    max-width: 135px;
-}
-
-/* botoes do menu */
-.buttons {
     display: flex;
+    align-items: center;
+    padding-top: .5rem;
 }
 
-.select {
+#navbar-brand { /* Netflix logo Div */
+	width: 134px;
+}
+
+#navbar-brand img { /* Setting logo size */
+    width: 100%;
+}
+
+/* Menu Buttons Styling */
+.navbar-buttons { /* Giving a left-marging to throw the buttons Div to end */
+	margin-left: auto;
+}
+
+.lang-dropdown {
     width: 120px;
     height: 35px;
     padding: .5rem 1.375rem;
@@ -105,8 +91,26 @@ section {
     text-align: center;
 }
 
+/* Background Config */
+.background-div {
+    position: absolute;
+    top: 0;
+    bottom: -15px;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    filter: brightness(70%);
+    z-index: -1;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* About Us Card-Text */
-.about-us-card {
+.hero-container {
     width: 100%;
     position: relative;
     padding: 70px 45px;
@@ -114,50 +118,50 @@ section {
     background: transparent;
 }
 
-.about-us-text {
+.card {
     padding: 70px 0;
     max-width: 950px;
     margin: 0 auto;
 }
 
-.about-us-card h1, .about-us-card h2 {
+.card-title, .card-subtitle {
     max-width: 640px;
 }
 
-.about-us-title {
+.card-title {
     font-size: 3.125rem;
     line-height: 1.1;
     margin: 0 auto;
 }
 
-.about-us-subtitle, .about-us-label {
+.card-subtitle, .form-label {
     font-weight: 400;
     margin: 1rem auto;
 }
 
-.about-us-subtitle {
+.card-subtitle {
     font-size: 1.625rem;
 }
 
-.about-us-label {
+.form-label {
     font-size: 1.2rem;
     padding-bottom: 20px;
     margin-bottom: 0;
 }
 
-.about-us-form {
+.email-form {
     max-width: 950px;
     padding-top: .85rem;
     text-align: center;
     margin: 0 auto;
 }
 
-.about-us-buttons {
+.form-buttons {
     display: flex;
     justify-content: center;
 }
 
-.about-us-input {
+.form-input {
     background-color: rgb(255,255,255);
     padding: 0 10px;
     width: 450px;
@@ -165,11 +169,11 @@ section {
     border: 1px solid #8C8C8C;
 }
 
-.about-us-input::placeholder {
+.form-input::placeholder {
     font-size: 16px;
 }
 
-.about-us-btn {
+.email-btn {
     background-color: var(--main-red);
     color:white;
     padding: 15px 35px 15px 20px;
@@ -183,7 +187,7 @@ section {
 	background-position: 5em 0.85em;
 }
 
-.about-us-btn:hover {
+.email-btn:hover {
     background-color: rgb(255, 27, 27);
 }
 
@@ -367,7 +371,7 @@ section {
     text-decoration: underline;
 }
 
-#rodape .select {
+#rodape .lang-dropdown {
     margin-top: 20px;
 }
 

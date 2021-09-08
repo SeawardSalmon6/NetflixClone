@@ -10,58 +10,61 @@
 </head>
 <body>
     <div id="body-content">
+
         <!-- Get Started Section -->
         <section id="first-section">
-            <!-- Breaks Apart Section of Content -->
+   
+			<!-- Barra de Navegação -->
+			<header id="navigation-bar">
+				
+				<!-- Content Div-Protector -->
+				<div class="nav-content">
+					
+					<!-- Netflix Logo -->
+					<div id="navbar-brand">
+						<img src="./images/netflix-logo.svg" alt="Netflix Logo" />
+					</div>
+					
+					<!-- Navbar Items -->
+					<nav class="navbar-buttons">
+						
+						<!-- Language Dropdown -->
+						<select class="lang-dropdown">
+							<option value="0">Português</option>
+							<option value="1">Inglês</option>
+						</select>
+						
+						<!-- Login Button -->
+						<a class="btn btn-login" href="#">Entrar</a>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Breaks Apart Section of Content -->
             <div class="hero-container">
-                <!-- Background Image -->
+
+				<!-- Background Image -->
                 <div class="background-div">
                     <img class="background-img" src="images/background-img.jpg" alt="Background" />
                 </div>
                 
-                <!-- Barra de Navegação -->
-                <header id="navigation-bar">
-                    
-                    <!-- Content Div-Protector -->
-                    <div class="nav-content">
-                        
-                        <!-- Netflix Logo -->
-                        <div id="navbar-brand">
-                            <img src="./images/netflix-logo.svg" alt="Netflix Logo" />
-                        </div>
-                        
-                        <!-- Navbar Items -->
-                        <nav class="buttons">
-                            
-                            <!-- Language Dropdown -->
-                            <select class="select">
-                                <option value="0">Português</option>
-                                <option value="1">Inglês</option>
-                            </select>
-                            
-                            <!-- Login Button -->
-                            <a class="btn btn-login" href="#">Entrar</a>
-                        </nav>
-                    </div>
-                </header>
-                
                 <!-- About Us Text -->
-                <div class="about-us-card">
-                    <div class="about-us-text">
-                        <h1 class="about-us-title">Filmes, séries e muito mais. Sem limites. </h1>
-                        <h2 class="about-us-subtitle">Assista onde quiser. Cancele quando quiser.</h2>
-                        
-                        <!-- Form - Input E-mail -->
-                        <form class="about-us-form">
-                            <h4 class="about-us-label">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h4>
-                            <div class="about-us-buttons">
-                                <!-- Search-Bar -->
-                                <input class="about-us-input" type="text" placeholder="Email" />
-                                <a class="about-us-btn" href="#">Vamos lá</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+				<div class="about-us card">
+					<header class="card-header">
+						<h1 class="card-title">Filmes, séries e muito mais. Sem limites. </h1>
+						<h2 class="card-subtitle">Assista onde quiser. Cancele quando quiser.</h2>
+					</header>
+					
+					<!-- Form - Input E-mail -->
+					<form class="about-us email-form">
+						<h4 class="form-label">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h4>
+						<div class="form-buttons">
+							<!-- Search-Bar -->
+							<input class="form-input" type="text" placeholder="Email" />
+							<a class="btn email-btn" href="#">Vamos lá</a>
+						</div>
+					</form>
+				</div>
             </div>
         </section>
         
@@ -294,7 +297,7 @@
                 </div>
                 
                 <!-- Language Dropdown -->
-                <select class="select">
+                <select class="navbar-dropdown">
                     <option value="0">Português</option>
                     <option value="1">Inglês</option>
                 </select>
