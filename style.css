@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 
 /* Setting Project Colors */
 :root {
     --main-red: #E50914;
     --border-section: #222222;
     --faq-questions-background: #303030;
+    --footer-text-color: #757575;
 }
 
 /* Reseting CSS */
@@ -13,12 +15,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Source Sans Pro", "Roboto", Arial, sans-serif;
 }
 
 /* Body-Container Config */
 #body-content {
-    background-color: black;
     color: white;
     width: 100%;
     overflow-x: hidden;
@@ -29,14 +30,16 @@ a { /* Setting Standard Style for Anchors */
     color: white;
 }
 
-section { /* Giving every Section a border-bottom */
+section, footer { /* Giving every Section a border-bottom */
     border-bottom: 8px solid var(--border-section);
+    background-color: black;
 }
 
 /* First Section Style */ 
 #first-section { /* Centering Section and adding a blur to it */
     margin: 0 auto;
     background: linear-gradient(to top,rgba(0,0,0,1) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,0.85));
+    background-color: none;
 }
 
 /* Navbar - Header */
@@ -89,296 +92,320 @@ section { /* Giving every Section a border-bottom */
 
 .btn-login { /* Styling Login Button */
     background-color: var(--main-red);
-    padding: 10px 17px;
+    height: 36px;
+    padding: 7px 17px;
     border-radius: 3px;
     text-align: center;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 /* Background Config */
-.hero-container {
-    width: 100%;
+.hero-container { /* Configuring flexible container for content */
     position: relative;
     padding: 70px 45px;
+    margin: 0 auto;
     text-align: center;
-    background: transparent;
+    background: none;
 }
 
-.background-div { /* Div-Prepare for positioning */
+.background-div { /* Positioning Background-Image */
     position: absolute;
-    top: 0;
+    top: -70px;
     bottom: 0;
     right: 0;
     left: 0;
     overflow: hidden;
-    z-index: -1;
     filter: brightness(70%);
+    z-index: -1;
 }
 
-.background-img {
+.background-img { /* Image Config */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* About Us Card-Text */
-.card {
-    padding: 70px 0;
+.card { /* Card-Content Styling */
+    padding: 75px 0;
     max-width: 950px;
-    margin: 0 auto;
 }
 
-.card-title, .card-subtitle {
+.card-header { /* Block with title and subtitle */
     max-width: 640px;
 }
 
-.card-title {
-    font-size: 3.125rem;
-    line-height: 1.1;
+.card, .card-header { /* Similiraties with card and card-header styles */
     margin: 0 auto;
 }
 
-.card-subtitle, .form-label {
-    font-weight: 400;
-    margin: 1rem auto;
+.card-title { /* Card title unique style */
+    font-size: 3.125rem;
+    line-height: 1.1;
 }
 
-.card-subtitle {
+.card-subtitle { /* Card subtitle unique style */
     font-size: 1.625rem;
+    margin: 1rem 0;
 }
 
-.form-label {
-    font-size: 1.2rem;
-    padding-bottom: 20px;
-    margin-bottom: 0;
-}
-
-.email-form {
+/* Styling Email-Form Input */
+.email-form { /* Email-Form Box Styling */
     max-width: 950px;
     padding-top: .85rem;
     text-align: center;
     margin: 0 auto;
 }
 
-.form-buttons {
+.form-label { /* Input Header Style */
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
+
+.card-subtitle, .form-label { /* Similiraties with card subtitle style and form-label style */
+    font-weight: 400;
+}
+
+.form-buttons { /* Styling input and button holder */
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.form-input {
-    background-color: rgb(255,255,255);
-    padding: 0 10px;
-    width: 450px;
-    height: 60px;
-    border: 1px solid #8C8C8C;
+.email-btn, .email-input { /* Applying border-radius to form components */
+    border-radius: 2px;
 }
 
-.form-input::placeholder {
+.email-input { /* Styling email-input */ 
+    background-color: white;
+    padding: 0 10px;
+    min-width: 450px;
+    height: 60px;
+    border: 1px solid #8C8C8C;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.email-input::placeholder { /* Increasing font-size for input placeholder */
     font-size: 16px;
 }
 
-.email-btn {
+.email-btn { /* Submit button styling */
     background-color: var(--main-red);
     color:white;
-    padding: 15px 35px 15px 20px;
+    padding-right: 26px;
+    padding-left: 26px;
+    min-height: 60px;
     font-size: 25px;
-    box-shadow: 0 1px 0 rgba(0,0,0,.45);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .45);
     border-left: 1px solid #333;
-
-    background-image: url(images/chevron.png);
-	background-repeat: no-repeat;
-	background-size: 0.8em auto;
-	background-position: 5em 0.85em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
 }
 
-.email-btn:hover {
+.svg-chevron { /* Styling chevron icon on submit button */
+    position: relative;
+    height: 20px;
+    width: 20px;
+    bottom: -2px;
+}
+
+.email-btn:hover { /* Hover animation for submit button */
     background-color: rgb(255, 27, 27);
 }
 
-/* main - second section */
-.card-container {
-    padding: 70px 45px;
-}
-
-#second-section {
-    padding-top: 20px;
-    padding-bottom: 50px;
-}
-
-.container {
+/* Main Sections Standard Containers */
+.container { /* Applying container class with flex */
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     max-width: 1110px;
+    text-align: left;
 }
 
-.img-column img {
-    max-width: 530px;
-}
-
-/* third section  */
-.third-section.container {
+.row-reverse { /* Applying container class with row-reverse */
     flex-direction: row-reverse;
 }
 
-.third-section .text-column {
-    width: 48%;
+.text-column { /* Fixes text-column size */
+    max-width: 52%;
+    padding-right: 3rem;
 }
 
-.third-section .img-column {
-    margin-top: -3%;
-    margin-left: -6%;
+.row-reverse .text-column { /* Inverts padding side on row-reverse containers */
+    padding-right: 0;
+    padding-left: 3rem;
 }
 
-.third-section .img-column img {
+.img-column { /* Fixes img-column size */
+    max-width: 48%;
+}
+
+/* Second Section - Enjoy on TV */
+#second-section .img-container { /* Sizing and positioning second's section image */
+    max-width: 530px;
+    margin-top: -13%;
+}
+
+#second-section .img-container img {
+    width: 100%;
+}
+
+/* Third Section - Download Offline  */
+#third-section .img-container { /* Sizing and positioning third's section image */
     max-width: 500px;
+    margin-top: -9%;
+    margin-left: -12%;
 }
 
-/* Fourth Section */
-#fourth-section {
-    padding-top: 40px;
-    padding-bottom: 70px;
+#third-section .img-container img {
+    width: 100%;
 }
 
-.fourth-section-text {
-    width: 40%;
-}
-
-.fourth-section .img-column {
+/* Fourth Section - Device-Pile */
+#fourth-section .img-container { /* Sizing and positioning fourth's section image */
+    max-width: 555px;
+    margin-top: -10px;
     margin-right: -4%;
 }
 
-.fourth-section  .img-column img {
-    max-width: 540px;
+#fourth-section .img-container img {
+    width: 100%;
 }
 
 
-/* Fifth Section */
-#fifth-section .container {
-    flex-direction: row-reverse;
+/* Fifth Section - Kids */
+#fifth-section .img-container { /* Sizing fifth's section image */
+    max-width: 505px;
 }
 
-#fifth-section .text-column {
-    width: 50%;
+#fifth-section .img-container img {
+    width: 100%;
 }
 
-#fifth-section .img-column img {
-    max-width: 500px;
-}
-
-/* sixth section */
-.faq-section.container {
+/* FAQ-Section */
+#faq-section .container { /* Defines a flex-column direction */
     flex-direction: column;
 }
 
-.questions-column {
+#faq-section .card-title { /* Extra space at the section title */
+    margin-bottom: .5rem;
+}
+
+.questions-list { /* Gives a size to questions-list */
     width: 75%;
     margin: 2em auto;
     max-width: 815px;
 }
 
-.faq-question, .faq-answer {
+.btn-faq-question, .faq-answer { /* Styling Button and Content FAQ Blocks */
     color: white;
+    background: var(--faq-questions-background);
     display: block;
     text-align: left;
-    background: var(--faq-questions-background);
     font-size: 26px;
     font-weight: 400;
 }
 
-.faq-list-item {
+.faq-list-item { /* Adds a margin between the items of the list */
     list-style-type: none;
     margin-bottom: 8px;
 }
 
-.faq-question {
+.btn-faq-question { /* Styling the button itself */
     margin-bottom: 1px;
     position: relative;
     width: 100%;
     border: 0;
-    padding: .8em 2.2em .8em 1.2em;
+    padding: .8em 2.2em;
+    padding-left: 1.2em;
     cursor: pointer;
 }
 
-.svg-close {
+.svg-close { /* Positiong and organizing the close button icon */
     position: absolute;
     right: 1em;
     top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
     height: 1em;
     width: 1em;
     fill: #fff;
+    transform: translateY(-50%) rotate(-45deg);
 }
 
-.svg-close.open {
+.svg-close.open { /* Rotates the button when the answer is being shown */
     transform: translateY(-50%);
 }
 
-.faq-answer {
+.faq-answer.closed { /* When the answer is not being shown, it's hidden */
+    max-height: 0;
     overflow: hidden;
 }
 
-.faq-answer.open {
+.faq-answer.open { /* When the answer is being shown, it's adapt's to the text */
     padding: 1.2em;
     max-height: 1200px;
     transition: max-height .25s cubic-bezier(.5,0,.1,1);
 }
 
-.faq-answer.closed {
-    max-height: 0;
-    overflow: hidden;
+.faq-answer p:not(:last-of-type) { /* Puts an margin between paragraphs */
+    margin-bottom: 2rem;
 }
 
 /* Footer */
-.card-container {
-    padding-bottom: 35px;
+#footer .hero-container { /* Aligns all the footer content to the left */
+    text-align: left;
 }
 
-.rodape-content {
+.footer-container { /* Styling content of the footer */
     min-width: 190px;
     max-width: 900px;
     font-size: 1em;
-    color: #757575;
-    position: relative;
+    color: var(--footer-text-color);
     margin: 0 auto;
 }
 
-.duvidas-title {
+.need-help-title { /* Gives the first line of text a margin-bottom */
     margin-bottom: 30px;
 }
 
-.info-rodape.container {
+#footer .container { /* Styles the links block of items */
     margin: 0;
     font-size: 13px;
-    max-width: 900px;
     align-items: baseline;
 }
 
-#rodape, #rodape a {
-    color: #757575;
+.links-column { /* Sets a width to the columns of links */
+    width: 225px;
 }
 
-.column {
-    width: 25%;
-}
-
-.nav-item {
+.nav-item { /* Styling nav-items */
     list-style-type: none;
     margin-bottom: 16px;
     min-width: 100px;
     padding-right: 12px;
-    vertical-align: top;
 }
 
-.duvidas-title a:hover, .nav-item-text:hover {
+#footer, .nav-link { /* Apllies color to the anchors */
+    color: var(--footer-text-color);
+}
+
+.nav-link:hover { /* Applies an underline decoration at the anchors, when hovered */
     text-decoration: underline;
 }
 
-#rodape .lang-dropdown {
+#footer .lang-dropdown { /* Applies a margin-top to the land-dropdown */
+    width: 162px;
+    height: 53px;
     margin-top: 20px;
+    margin-left: 0px;
+    color: var(--footer-text-color);
 }
 
-.footer-p {
+.footer-p { /* Styles the footer last line */
     font-size: 13px;
     margin-top: 24px;
 }
