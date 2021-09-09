@@ -16,3 +16,7 @@ function questions(element) {
         svgClose.classList.add("closed");
     }
 }
+
+function playAudio() {
+    document.getElementById("lolAudio").play();
+}
