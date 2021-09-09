@@ -326,6 +326,10 @@ section, footer { /* Giving every Section a border-bottom */
     cursor: pointer;
 }
 
+.btn-faq-question:hover { /* Simple animation for hovering */
+    filter: brightness(90%);
+}
+
 .svg-close { /* Positiong and organizing the close button icon */
     position: absolute;
     right: 1em;
@@ -334,21 +338,23 @@ section, footer { /* Giving every Section a border-bottom */
     width: 1em;
     fill: #fff;
     transform: translateY(-50%) rotate(-45deg);
+    transition: .3s ease-in-out;
 }
 
 .svg-close.open { /* Rotates the button when the answer is being shown */
     transform: translateY(-50%);
 }
 
-.faq-answer.closed { /* When the answer is not being shown, it's hidden */
+.faq-answer { /* When the answer is not being shown, it's hidden */
     max-height: 0;
     overflow: hidden;
 }
 
 .faq-answer.open { /* When the answer is being shown, it's adapt's to the text */
+    clear: both;
     padding: 1.2em;
     max-height: 1200px;
-    transition: max-height .25s cubic-bezier(.5,0,.1,1);
+    transition: max-height 2s ease-out;
 }
 
 .faq-answer p:not(:last-of-type) { /* Puts an margin between paragraphs */
