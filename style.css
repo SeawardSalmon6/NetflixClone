@@ -348,13 +348,16 @@ section, footer { /* Giving every Section a border-bottom */
 .faq-answer { /* When the answer is not being shown, it's hidden */
     max-height: 0;
     overflow: hidden;
+    transition: max-height .6s ease-in-out;
 }
 
 .faq-answer.open { /* When the answer is being shown, it's adapt's to the text */
     clear: both;
-    padding: 1.2em;
     max-height: 1200px;
-    transition: max-height 2s ease-out;
+}
+
+.faq-answer-text { /* Padding to the text-block inside faq-answer */
+    padding: 1.2em;
 }
 
 .faq-answer p:not(:last-of-type) { /* Puts an margin between paragraphs */
